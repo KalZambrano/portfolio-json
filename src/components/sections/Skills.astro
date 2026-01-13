@@ -1,0 +1,79 @@
+---
+import HTML from "@/assets/skills/html5-logo-svgrepo-com.svg";
+import CSS from "@/assets/skills/css-svgrepo-com.svg";
+import JavaScript from "@/assets/skills/javascript-16-svgrepo-com.svg";
+import TypeScript from "@/assets/skills/typescript-16-svgrepo-com.svg";
+import React from "@/assets/skills/react-svgrepo-com.svg";
+import Node from "@/assets/skills/node-16-svgrepo-com.svg";
+import MySQL from "@/assets/skills/mysql-svgrepo-com.svg";
+import Git from "@/assets/skills/git-svgrepo-com.svg";
+import GitHub from "@/assets/social/github.svg";
+import Laravel from "@/assets/skills/brand-laravel.svg";
+import Figma from "@/assets/skills/brand-figma.svg";
+// import Next from "@/assets/skills/nextjs-svgrepo-com.svg";
+import Tailwind from "@/assets/skills/tailwind-svgrepo-com.svg";
+// import Swift from "@/assets/skills/swift-svgrepo-com.svg";
+// import SwiftUI from "@/assets/skills/swiftui-svgrepo-com.svg";
+// import Kotlin from "@/assets/skills/kotlin-svgrepo-com.svg";
+// import Flutter from "@/assets/skills/flutter-svgrepo-com.svg";
+
+import SectionContainer from "../SectionContainer.astro";
+import { skills } from "@cv";
+
+const SKILLS_ICONS: Record<string, any> = {
+  HTML,
+  CSS,
+  JavaScript,
+  TypeScript,
+  React,
+  Node,
+  MySQL,
+  Git,
+  GitHub,
+  Laravel,
+  Figma,
+  // Next,
+  Tailwind,
+  // Swift,
+  // SwiftUI,
+  // Kotlin,
+  // Flutter,
+};
+
+---
+
+<SectionContainer title="Habilidades">
+  <ul>
+    {
+      skills.map(({ name }) => {
+        const iconName = name === "Next.js" ? "Next" : name;
+        const Icon = SKILLS_ICONS[iconName];
+
+        return (
+          <li>
+            {Icon && <Icon class="size-4"/>} <span>{name}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</SectionContainer>
+
+<style>
+  ul {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    align-items: center;
+    background: #eee;
+    border-radius: 6px;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 500;
+    gap: 4px;
+    padding: 0.2rem 0.6rem;
+  }
+</style>
