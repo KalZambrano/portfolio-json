@@ -1,0 +1,226 @@
+{
+  "basics": {
+    "name": "Kaleb Zambrano Berlanga",
+    "label": "Full Stack Developer con más de 2 años de experiencia",
+    "image": "/me.webp",
+    "email": "kalebzambranob28@gmail.com",
+    "phone": "+34 688888888",
+    "url": "https://portfolio-kaleb.vercel.app/",
+    "summary": "+2 año de experiencia como desarrollador web. Estudiante de Ingeniería de Sistemas e Informática de Lima, Perú. Especializado en desarrollo frontend y apasionado por crear aplicaciones web únicas, modernas y con interfaces fáciles de usar.",
+    "location": {
+      "address": "",
+      "postalCode": "08820",
+      "city": "Lima",
+      "countryCode": "ES",
+      "region": "Perú"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "kaleb-zambrano-berlanga",
+        "url": "https://linkedin.com/in/kaleb-zambrano-berlanga"
+      },
+      {
+        "network": "X",
+        "username": "kal.zambrano",
+        "url": "https://instagram.com/kal.zambrano"
+      },
+      {
+        "network": "GitHub",
+        "username": "KalZambrano",
+        "url": "https://github.com/KalZambrano"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Neon House Led",
+      "position": "Desarrollador Web Jr.",
+      "url": "https://nhldecoracioncomercial.com/",
+      "startDate": "2025-03-01",
+      "endDate": "2025-06-01",
+      "summary": "Desarrollé APIs RESTful con Laravel e implementé páginas dinámicas mediante Blade. Lideré un equipo de desarrollo, coordinando tanto el código como los despliegues mensuales en Hostinger, aplicando buenas prácticas de SEO.",
+      "highlights": ["Started the company"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Tecnológica del Perú",
+      "url": "https://www.utp.edu.pe/",
+      "area": "Ingeniero de Sistemas e Informática",
+      "studyType": "Bachelor",
+      "startDate": "2021-01-01",
+      "endDate": "2026-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Figma",
+      "level": "Intermedio",
+      "keywords": ["Diseño", "Prototipado", "UI/UX"]
+    },
+    {
+      "name": "Laravel",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Backend", "PHP Framework"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Cecapd",
+      "isActive": true,
+      "description": "Landing page para el Centro de Capacitación Profesional para el Desarrollo",
+      "highlights": [
+        "SEO Optimized",
+        "Diseño Responsive",
+        "Desarrollado con Astro"
+      ],
+      "url": "https://cecapd-landing.vercel.app/"
+    },
+    {
+      "name": "Asden Perú",
+      "isActive": true,
+      "description": "Aplicación web para el apoyo a poblaciones vulnerables a través de iniciativas de desarrollo social",
+      "highlights": ["Apoyo a la comunidad", "Laravel & Hostinger"],
+      "url": "https://asdenperuong.com/"
+    },
+    {
+      "name": "Dilema del Prisionero",
+      "isActive": true,
+      "description": "Juego interactivo de simulación de la Teoria de Juegos con desafíos y secretos",
+      "highlights": ["Teoria de juegos", "JavaScript & TypeScript"],
+      "url": "https://dilema-prisionero.vercel.app/",
+      "github": "https://github.com/KalZambrano/dilema-prisionero"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+const { title } = Astro.props;
+---
+
+<section class="py-4 mx-8 md:mx-6">
+  {
+    title && (
+      <h2 class="text-gray-700 dark:text-gray-500 font-semibold text-lg md:text-xl mb-2">
+        {title}
+      </h2>
+    )
+  }
+  <slot />
+</section>
