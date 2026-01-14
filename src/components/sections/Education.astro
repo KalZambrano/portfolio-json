@@ -1,68 +1,50 @@
 ---
-import SectionContainer from "../SectionContainer.astro"
-
-import { education } from "@cv"
+import SectionContainer from "../SectionContainer.astro";
+import { education } from "@cv";
 ---
 
 <SectionContainer title="Educación">
-  <ul>
+  <div class="space-y-6">
     {
-      education.map(({ institution, startDate, endDate, area }) => {
-        const startYear = new Date(startDate).getFullYear()
-        const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual"
-        const years = `${startYear} - ${endYear}`
+      education.map(({ institution, startDate, endDate, area, score }) => {
+        const startYear = new Date(startDate).getFullYear();
+        const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual";
+        const isCurrent = !endDate;
 
         return (
-          <li>
-            <article>
-              <header>
+          <div class="group relative">
+            
+
+            <article class="relative rounded-xl bg-white/50 p-5 shadow-sm transition-all duration-200 hover:shadow-md dark:bg-zinc-900/50 dark:hover:bg-zinc-900/70">
+              <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3>{institution}</h3>
+                  <h3 class="text-base font-semibold text-zinc-900 dark:text-white">
+                    {institution}
+                  </h3>
+                  <p class="text-sm text-zinc-600 dark:text-zinc-300">
+                    {area}
+                  </p>
                 </div>
-
-                <time>{years}</time>
-              </header>
-
-              <footer>
-                <p class="font-mono text-gray-600">{area}</p>
-              </footer>
+                
+                <div class="mt-1 flex items-center gap-2 sm:mt-0">
+                  <time class="inline-flex items-center rounded-full bg-amber-50 px-2.5 py-0.5 text-xs font-medium text-amber-800 dark:bg-amber-900/30 dark:text-amber-300">
+                    {startYear} — {endYear}
+                    {isCurrent && (
+                      <span class="ml-1.5 flex h-1.5 w-1.5 items-center justify-center">
+                        <span class="absolute h-2 w-2 animate-ping rounded-full bg-amber-400"></span>
+                        <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                      </span>
+                    )}
+                  </time>
+                </div>
+              </div>
+              
+              {/* Hover effect */}
+              <div class="absolute inset-0 -z-10 rounded-xl bg-linear-to-r from-amber-50/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-amber-900/10"></div>
             </article>
-          </li>
-        )
+          </div>
+        );
       })
     }
-  </ul>
+  </div>
 </SectionContainer>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 550;
-    color: #111;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>

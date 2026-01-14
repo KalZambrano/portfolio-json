@@ -6,9 +6,12 @@ import Skills from '@/components/sections/Skills.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Experience from '@/components/sections/Experience.astro';
 import Education from '@/components/sections/Education.astro';
+
+import { basics } from '@cv';
+const { name, label } = basics;
 ---
 
-<Layout>
+<Layout title={`Portafolio de ${name} - ${label}`}>
 	<Hero/>
 	<About/>
 	<Experience />

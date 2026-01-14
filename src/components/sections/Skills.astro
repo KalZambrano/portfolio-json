@@ -43,37 +43,29 @@ const SKILLS_ICONS: Record<string, any> = {
 ---
 
 <SectionContainer title="Habilidades">
-  <ul>
-    {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name;
-        const Icon = SKILLS_ICONS[iconName];
+  <div class="space-y-6">
+    <div class="flex flex-wrap gap-2">
+      {
+        skills.map(({ name }) => {
+          const iconName = name === "Next.js" ? "Next" : name;
+          const Icon = SKILLS_ICONS[iconName];
 
-        return (
-          <li>
-            {Icon && <Icon class="size-4"/>} <span>{name}</span>
-          </li>
-        );
-      })
-    }
-  </ul>
+          return (
+            <div class="group relative">
+              <div class="peer relative z-10 flex items-center gap-2 rounded-lg border border-zinc-200 bg-white/50 px-4 py-2.5 text-sm font-medium text-zinc-700 transition-all duration-200 hover:z-20 hover:scale-105 hover:border-amber-300 hover:bg-white hover:shadow-md dark:border-zinc-700 dark:bg-zinc-800/50 dark:text-zinc-200 dark:hover:border-amber-600/50 dark:hover:bg-zinc-800">
+                {Icon && (
+                  <span class="flex h-5 w-5 items-center justify-center rounded-md bg-amber-50 p-0.5 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400">
+                    <Icon class="h-full w-full" />
+                  </span>
+                )}
+                <span>{name}</span>
+              </div>
+              
+            </div>
+          );
+        })
+      }
+    </div>
+    
+  </div>
 </SectionContainer>
-
-<style>
-  ul {
-    display: inline-flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-
-  li {
-    align-items: center;
-    background: #eee;
-    border-radius: 6px;
-    display: flex;
-    font-size: 0.8rem;
-    font-weight: 500;
-    gap: 4px;
-    padding: 0.2rem 0.6rem;
-  }
-</style>

@@ -1,131 +1,67 @@
 ---
 import SectionContainer from "../SectionContainer.astro";
-
 import { work } from "@cv";
 ---
 
 <SectionContainer title="Experiencia laboral">
-  <ul>
+  <div class="space-y-8">
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
+        ({ name, startDate, endDate, position, summary, url }) => {
           const startYear = new Date(startDate).getFullYear();
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual";
+          const endYear = endDate != null ? new Date(endDate).getFullYear() : "Actual";
+          const isCurrent = !endDate;
 
           return (
-            <li>
-              <article>
-                <header>
+            <div class="group relative pl-6">
+              {/* Timeline dot */}
+              <div class="absolute left-0 top-2 h-3 w-3 rounded-full border-2 border-amber-500 bg-white dark:border-amber-400 dark:bg-zinc-900">
+                {isCurrent && (
+                  <span class="absolute inset-0 -z-10 flex h-full w-full animate-ping rounded-full bg-amber-400/30"></span>
+                )}
+              </div>
+              
+              {/* Timeline line */}
+              <div class="absolute left-1.25 top-5 -bottom-8 w-0.5 bg-linear-to-b from-amber-400 to-transparent dark:from-amber-500"></div>
+
+              <article class="relative rounded-xl p-4 transition-all duration-200 hover:bg-white/50 dark:hover:bg-zinc-800/50">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
+                    <h3 class="text-base font-semibold text-zinc-900 dark:text-white">
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group-hover:text-amber-600 dark:group-hover:text-amber-400"
+                      >
                         {name}
+                        <span class="ml-1.5 inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
                       </a>
                     </h3>
-                    <h4>{position}</h4>
+                    <h4 class="text-sm font-medium text-zinc-600 dark:text-zinc-300">
+                      {position}
+                    </h4>
                   </div>
+                  
+                  <time class="inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-800 dark:bg-zinc-700/50 dark:text-zinc-200 sm:mt-1">
+                    {startYear} — {endYear}
+                    {isCurrent && (
+                      <span class="ml-1.5 flex h-1.5 w-1.5 items-center justify-center">
+                        <span class="absolute h-2 w-2 animate-ping rounded-full bg-amber-400"></span>
+                        <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                      </span>
+                    )}
+                  </time>
+                </div>
 
-                  <div>
-                    <time datetime={startDate} data-title={startDate}>
-                      {startYear}
-                    </time>
-                    {" - "}
-                    <time datetime={endDate} data-title={endDate}>
-                      {endYear}
-                    </time>
-                  </div>
-                </header>
-
-                <footer>
-                  <p class="font-mono text-gray-600">{summary}</p>
-                </footer>
+                <p class="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+                  {summary}
+                </p>
               </article>
-            </li>
+            </div>
           );
         }
       )
     }
-  </ul>
+  </div>
 </SectionContainer>
-
-<style>
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  article h3 {
-    font-weight: 500;
-    color: #111;
-  }
-
-  article a {
-    color: #111;
-    font-weight: 550;
-  }
-
-  article a:hover {
-    text-decoration: underline;
-  }
-
-  article h4 {
-    color: #222;
-    font-weight: 400;
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 4px;
-  }
-
-  time {
-    color: #555;
-    font-size: 0.85rem;
-    min-width: 102px;
-    cursor: default;
-  }
-
-  [data-title]:hover:after {
-    opacity: 1;
-    transition: all 0.1s ease-in-out 0.5s;
-    visibility: visible;
-  }
-
-  [data-title]:after {
-    content: attr(data-title);
-    background-color: #333;
-    color: #fff;
-    font-size: 0.75rem;
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      "Courier New",
-      monospace;
-    position: absolute;
-    padding: 0.2rem 0.5rem;
-    bottom: -1.4rem;
-    left: 50%;
-    white-space: nowrap;
-    box-shadow: 1px 1px 1px #222222;
-    opacity: 0;
-    border: 1px solid #111111;
-    z-index: 99999;
-    visibility: hidden;
-    border-radius: 6px;
-  }
-
-  [data-title] {
-    position: relative;
-  }
-
-  @media (width <= 700px) {
-    time {
-      text-align: right;
-    }
-  }
-</style>
