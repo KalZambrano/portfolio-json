@@ -1,12 +1,12 @@
 ---
 import SectionContainer from "../SectionContainer.astro";
 
-const { basics } = Astro.props;
+const { basics, title } = Astro.props;
 const { summary } = basics;
 ---
 
 <SectionContainer
-  title="Sobre mí"
+  title={title}
   animate="animate-fade-in-up animate-delay-200"
 >
   <div class="space-y-4">

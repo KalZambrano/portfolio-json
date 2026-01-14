@@ -2,10 +2,10 @@
 import GitHub from "@/assets/social/github.svg";
 import SectionContainer from "../SectionContainer.astro";
 
-const { projects } = Astro.props;
+const { projects, title } = Astro.props;
 ---
 
-<SectionContainer title="Proyectos" animate="animate-fade-in-up animate-delay-700">
+<SectionContainer title={title} animate="animate-fade-in-up animate-delay-700">
   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
     {
       projects.map(

@@ -7,7 +7,7 @@ const { title, basics } = Astro.props;
 import ThemeToogle from "@/components/ThemeToogle.astro";
 import LanguageSelector from "@/components/LanguageSelector.astro";
 
-const { banner, summary, url } = basics;
+const { image, banner, summary, url } = basics;
 ---
 
 <!doctype html>
@@ -29,12 +29,12 @@ const { banner, summary, url } = basics;
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
-    <meta name="og:image" content={banner} />
+    <meta name="og:image" content={banner || image} />
     <meta name="og:url" content={url} />
 
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={summary} />
-    <meta name="twitter:image" content={banner} />
+    <meta name="twitter:image" content={banner || image} />
   </head>
 
   <body>

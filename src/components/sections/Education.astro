@@ -1,10 +1,10 @@
 ---
 import SectionContainer from "../SectionContainer.astro";
 
-const { education } = Astro.props
+const { education, title } = Astro.props
 ---
 
-<SectionContainer title="Educación" animate="animate-fade-in-left animate-delay-600">
+<SectionContainer title={title} animate="animate-fade-in-left animate-delay-600">
   <div class="space-y-6">
     {
       education.map(({ institution, startDate, endDate, area, score }) => {

@@ -1,10 +1,10 @@
 ---
 import SectionContainer from "../SectionContainer.astro";
 
-const { work } = Astro.props;
+const { work, title } = Astro.props;
 ---
 
-<SectionContainer title="Experiencia laboral" animate="animate-fade-in-right animate-delay-400">
+<SectionContainer title={title} animate="animate-fade-in-right animate-delay-400">
   <div class="space-y-8">
     {
       work.map(

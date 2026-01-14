@@ -10,13 +10,31 @@ import Education from "@/components/sections/Education.astro";
 const { cv } = Astro.props;
 const { basics, work, education, projects, skills } = cv;
 const { name, label } = basics;
+const url  = Astro.request.url
+console.log(url);
+const lang = url.includes('fr') ? 'fr' :
+            url.includes('en') ? 'en' :
+            url.includes('pt') ? 'pt' : 'es';
+console.log(lang);
+
+let labelTranslated
+
+if (lang === 'en') {
+  labelTranslated = ['About Me', 'Experience', 'Education', 'Projects', 'Skills'];
+} else if (lang === 'fr') {
+  labelTranslated = ['À propos de moi', "Expérience", "Éducation", "Projets", "Compétences"];
+} else if (lang === 'pt') {
+  labelTranslated = ['Sobre mim', "Experiência", "Educação", "Projetos", "Habilidades"];
+} else {
+  labelTranslated = ['Sobre mí', "Experiencia", "Educación", "Proyectos", "Habilidades"]; // Default to original label if language not recognized
+}
 ---
 
 <Layout title={`${name} Portfolio - ${label}`} basics={basics}>
   <Hero basics={basics} />
-  <About basics={basics} />
-  <Experience work={work} />
-  <Education education={education} />
-  <Projects projects={projects} />
-  <Skills skills={skills} />
+  <About title={labelTranslated[0]} basics={basics} />
+  <Experience title={labelTranslated[1]} work={work} />
+  <Education title={labelTranslated[2]} education={education} />
+  <Projects title={labelTranslated[3]} projects={projects} />
+  <Skills title={labelTranslated[4]} skills={skills} />
 </Layout>
