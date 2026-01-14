@@ -1,0 +1,199 @@
+{
+  "basics": {
+    "name": "Kaleb Zambrano Berlanga",
+    "label": "Développeur Full Stack avec plus de 2 ans d’expérience",
+    "image": "/me.webp",
+    "banner": "/og-banner.webp",
+    "email": "kalebzambranob28@gmail.com",
+    "phone": "+34 688888888",
+    "url": "https://portfolio-kaleb.vercel.app/",
+    "summary": "Plus de 2 ans d’expérience en tant que développeur web. Étudiant en ingénierie des systèmes et informatique à Lima, Pérou. Spécialisé en développement frontend et passionné par la création d’applications web uniques, modernes et avec des interfaces faciles à utiliser.",
+    "location": {
+      "address": "",
+      "postalCode": "08820",
+      "city": "Lima",
+      "countryCode": "ES",
+      "region": "Pérou"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "kaleb-zambrano-berlanga",
+        "url": "https://linkedin.com/in/kaleb-zambrano-berlanga"
+      },
+      {
+        "network": "X",
+        "username": "kal.zambrano",
+        "url": "https://instagram.com/kal.zambrano"
+      },
+      {
+        "network": "GitHub",
+        "username": "KalZambrano",
+        "url": "https://github.com/KalZambrano"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Neon House Led",
+      "position": "Développeur Web Junior",
+      "url": "https://nhldecoracioncomercial.com/",
+      "startDate": "2025-03-01",
+      "endDate": "2025-06-01",
+      "summary": "Développement d’API RESTful avec Laravel et implémentation de pages dynamiques avec Blade. Direction d’une équipe de développement, coordination du code et des déploiements mensuels sur Hostinger, en appliquant de bonnes pratiques SEO.",
+      "highlights": ["Début dans l’entreprise"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Tecnológica del Perú",
+      "url": "https://www.utp.edu.pe/",
+      "area": "Ingénierie des systèmes et informatique",
+      "studyType": "Licence",
+      "startDate": "2021-01-01",
+      "endDate": "2026-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - SQL de base"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Figma",
+      "level": "Intermedio",
+      "keywords": ["Diseño", "Prototipado", "UI/UX"]
+    },
+    {
+      "name": "Laravel",
+      "level": "Intermedio",
+      "keywords": ["Desarrollo Web", "Backend", "PHP Framework"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Espagnol",
+      "fluency": "Langue maternelle"
+    },
+    {
+      "language": "Anglais",
+      "fluency": "Avancé"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Game Price Comparison",
+      "isActive": true,
+      "description": "Application web pour comparer les prix des jeux sur différentes plateformes",
+      "highlights": [
+        "Comparaison des prix",
+        "Design responsive",
+        "Développé avec React"
+      ],
+      "url": "https://gamecompare.vercel.app/",
+      "github": "https://github.com/KalZambrano/game-price-comparison"
+    },
+    {
+      "name": "Cecapd",
+      "isActive": true,
+      "description": "Landing page pour le Centre de Formation Professionnelle pour le Développement",
+      "highlights": [
+        "SEO optimisé",
+        "Design responsive",
+        "Développé avec Astro"
+      ],
+      "url": "https://cecapd-landing.vercel.app/",
+      "github": "https://github.com/KalZambrano/cecapd-landing"
+    },
+    {
+      "name": "Dilemme du Prisonnier",
+      "isActive": true,
+      "description": "Jeu interactif de simulation de la théorie des jeux avec défis et secrets",
+      "highlights": ["Théorie des jeux", "JavaScript & TypeScript"],
+      "url": "https://dilema-prisionero.vercel.app/",
+      "github": "https://github.com/KalZambrano/dilema-prisionero"
+    },
+    {
+      "name": "Asden Pérou",
+      "isActive": true,
+      "description": "Application web visant à soutenir les populations vulnérables à travers des initiatives de développement social",
+      "highlights": ["Soutien communautaire", "Laravel & Hostinger"],
+      "url": "https://asdenperuong.com/"
+    },
+    {
+      "name": "Yuntas",
+      "isActive": true,
+      "description": "Application web pour la gestion de projets de l’organisation Yuntas",
+      "highlights": ["Design moderne", "Laravel & Astro"],
+      "url": "https://yuntaspublicidad.com/"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "basics": {
+    "name": "Kaleb Zambrano Berlanga",
+    "label": "Full Stack Developer with more than 2 years of experience",
+    "image": "/me.webp",
+    "banner": "/og-banner.webp",
+    "email": "kalebzambranob28@gmail.com",
+    "phone": "+34 688888888",
+    "url": "https://portfolio-kaleb.vercel.app/",
+    "summary": "Over 2 years of experience as a web developer. Systems and Computer Engineering student from Lima, Peru. Specialized in frontend development and passionate about creating unique, modern web applications with user-friendly interfaces.",
+    "location": {
+      "address": "",
+      "postalCode": "08820",
+      "city": "Lima",
+      "countryCode": "ES",
+      "region": "Peru"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "kaleb-zambrano-berlanga",
+        "url": "https://linkedin.com/in/kaleb-zambrano-berlanga"
+      },
+      {
+        "network": "X",
+        "username": "kal.zambrano",
+        "url": "https://instagram.com/kal.zambrano"
+      },
+      {
+        "network": "GitHub",
+        "username": "KalZambrano",
+        "url": "https://github.com/KalZambrano"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Neon House Led",
+      "position": "Junior Web Developer",
+      "url": "https://nhldecoracioncomercial.com/",
+      "startDate": "2025-03-01",
+      "endDate": "2025-06-01",
+      "summary": "Developed RESTful APIs with Laravel and implemented dynamic pages using Blade. Led a development team, coordinating both code and monthly deployments on Hostinger, applying SEO best practices.",
+      "highlights": ["Led the development team"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Technological University of Peru",
+      "url": "https://www.utp.edu.pe/",
+      "area": "Systems and Computer Engineering",
+      "studyType": "Bachelor",
+      "startDate": "2021-01-01",
+      "endDate": "2026-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend"]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend", "Responsive Design"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": ["Web Development", "Frontend", "Backend", "Full Stack"]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "CSS Framework",
+        "Responsive Design"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Advanced",
+      "keywords": [
+        "Web Development",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
+    },
+    {
+      "name": "MySQL",
+      "level": "Advanced",
+      "keywords": [
+        "Databases",
+        "SQL",
+        "Data Storage",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Advanced",
+      "keywords": ["Version Control", "Collaboration", "Source Code"]
+    },
+    {
+      "name": "GitHub",
+      "level": "Advanced",
+      "keywords": [
+        "Version Control",
+        "Collaboration",
+        "Source Code",
+        "Git"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Intermediate",
+      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
+    },
+    {
+      "name": "Figma",
+      "level": "Intermediate",
+      "keywords": ["Design", "Prototyping", "UI/UX"]
+    },
+    {
+      "name": "Laravel",
+      "level": "Intermediate",
+      "keywords": ["Web Development", "Backend", "PHP Framework"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Game Price Comparison",
+      "isActive": true,
+      "description": "Web application for comparing video game prices across different platforms",
+      "highlights": [
+        "Price comparison",
+        "Responsive design",
+        "Built with React"
+      ],
+      "url": "https://gamecompare.vercel.app/",
+      "github": "https://github.com/KalZambrano/game-price-comparison"
+    },
+    {
+      "name": "Cecapd",
+      "isActive": true,
+      "description": "Landing page for the Professional Training Center for Development",
+      "highlights": [
+        "SEO optimized",
+        "Responsive design",
+        "Built with Astro"
+      ],
+      "url": "https://cecapd-landing.vercel.app/",
+      "github": "https://github.com/KalZambrano/cecapd-landing"
+    },
+    {
+      "name": "Prisoner's Dilemma",
+      "isActive": true,
+      "description": "Interactive simulation game based on Game Theory with challenges and hidden mechanics",
+      "highlights": ["Game theory", "JavaScript & TypeScript"],
+      "url": "https://dilema-prisionero.vercel.app/",
+      "github": "https://github.com/KalZambrano/dilema-prisionero"
+    },
+    {
+      "name": "Asden Peru",
+      "isActive": true,
+      "description": "Web application supporting vulnerable populations through social development initiatives",
+      "highlights": ["Community support", "Laravel & Hostinger"],
+      "url": "https://asdenperuong.com/"
+    },
+    {
+      "name": "Yuntas",
+      "isActive": true,
+      "description": "Web application for project management for the Yuntas organization",
+      "highlights": ["Modern design", "Laravel & Astro"],
+      "url": "https://yuntaspublicidad.com/"
+    }
+  ]
+}
