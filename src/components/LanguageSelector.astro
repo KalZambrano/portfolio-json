@@ -46,7 +46,10 @@
   const btnImg = document.createElement("img");
   btnImg.src = flags[currentLang].url;
   btnImg.alt = currentLang.toUpperCase();
-  btn.appendChild(btnImg);
+  btnImg.width = 48;
+  btnImg.height = 48;
+  btnImg.fetchPriority = "high";
+  btn?.appendChild(btnImg);
 
   // Render dropdown with other languages
   function renderList() {
@@ -66,7 +69,7 @@
       img.width = 48;
       img.height = 48;
       img.alt = lang.toUpperCase();
-
+      img.fetchPriority = "high";
       a.appendChild(img);
       li.appendChild(a);
       list.appendChild(li);
