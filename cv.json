@@ -197,6 +197,18 @@
   ],
   "projects": [
     {
+      "name": "Game Price Comparison",
+      "isActive": true,
+      "description": "Aplicación web para comparar precios de juegos en diferentes plataformas",
+      "highlights": [
+        "Comparación de precios",
+        "Diseño Responsive",
+        "Desarrollado con React"
+      ],
+      "url": "https://gamecompare.vercel.app/",
+      "github": "https://github.com/KalZambrano/game-price-comparison"
+    },
+    {
       "name": "Cecapd",
       "isActive": true,
       "description": "Landing page para el Centro de Capacitación Profesional para el Desarrollo",
@@ -205,7 +217,16 @@
         "Diseño Responsive",
         "Desarrollado con Astro"
       ],
-      "url": "https://cecapd-landing.vercel.app/"
+      "url": "https://cecapd-landing.vercel.app/",
+      "github": "https://github.com/KalZambrano/cecapd-landing"
+    },
+    {
+      "name": "Dilema del Prisionero",
+      "isActive": true,
+      "description": "Juego interactivo de simulación de la Teoria de Juegos con desafíos y secretos",
+      "highlights": ["Teoria de juegos", "JavaScript & TypeScript"],
+      "url": "https://dilema-prisionero.vercel.app/",
+      "github": "https://github.com/KalZambrano/dilema-prisionero"
     },
     {
       "name": "Asden Perú",
@@ -215,12 +236,11 @@
       "url": "https://asdenperuong.com/"
     },
     {
-      "name": "Dilema del Prisionero",
+      "name": "Yuntas",
       "isActive": true,
-      "description": "Juego interactivo de simulación de la Teoria de Juegos con desafíos y secretos",
-      "highlights": ["Teoria de juegos", "JavaScript & TypeScript"],
-      "url": "https://dilema-prisionero.vercel.app/",
-      "github": "https://github.com/KalZambrano/dilema-prisionero"
+      "description": "Aplicación web para la gestión de proyectos de la organización Yuntas",
+      "highlights": ["Diseño moderno", "Laravel & Astro"],
+      "url": "https://yuntaspublicidad.com/"
     }
   ]
 }
