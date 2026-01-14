@@ -11,11 +11,11 @@ const { cv } = Astro.props;
 const { basics, work, education, projects, skills } = cv;
 const { name, label } = basics;
 const url  = Astro.request.url
-console.log(url);
+// console.log(url);
 const lang = url.includes('fr') ? 'fr' :
             url.includes('en') ? 'en' :
             url.includes('pt') ? 'pt' : 'es';
-console.log(lang);
+// console.log(lang);
 
 let labelTranslated
 

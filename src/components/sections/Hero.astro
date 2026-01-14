@@ -13,15 +13,6 @@ const { basics } = Astro.props;
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
 
-// Build a simple responsive `srcset` for the avatar.
-// Ensure you generate matching files in `public/` (me-128.webp, me-256.webp, me-512.webp).
-const imageSrc = image;
-const extMatch = imageSrc ? imageSrc.match(/\.([a-z0-9]+)$/i) : null;
-const ext = extMatch ? extMatch[1] : "webp";
-const base = ext ? imageSrc.replace(new RegExp(`\\.${ext}$`), "") : imageSrc;
-const srcset = `${base}-128.${ext} 128w, ${base}-256.${ext} 256w, ${base}-512.${ext} 512w, ${imageSrc} 882w`;
-const sizes = "128px";
-
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
   LinkedIn,
@@ -114,8 +105,6 @@ const SOCIAL_ICONS: SocialIcon = {
     <figure class="shrink-0">
       <img
         src={image}
-        srcset={srcset}
-        sizes={sizes}
         alt={name}
         class="size-32 rounded-2xl object-cover
           ring-1 ring-zinc-200
