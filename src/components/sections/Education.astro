@@ -3,7 +3,7 @@ import SectionContainer from "../SectionContainer.astro";
 import { education } from "@cv";
 ---
 
-<SectionContainer title="Educación">
+<SectionContainer title="Educación" animate="animate-fade-in-left animate-delay-600">
   <div class="space-y-6">
     {
       education.map(({ institution, startDate, endDate, area, score }) => {

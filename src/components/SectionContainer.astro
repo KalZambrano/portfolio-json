@@ -1,8 +1,8 @@
 ---
-const { title } = Astro.props;
+const { title, animate } = Astro.props;
 ---
 
-<section class="py-4 mx-8 md:mx-6">
+<section class={`py-4 mx-8 md:mx-6 ${animate}`}>
   {
     title && (
       <h2 class="text-gray-700 dark:text-gray-500 font-semibold text-lg md:text-xl mb-2">
