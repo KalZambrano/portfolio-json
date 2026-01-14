@@ -18,7 +18,7 @@ import Tailwind from "@/assets/skills/tailwind-svgrepo-com.svg";
 // import Flutter from "@/assets/skills/flutter-svgrepo-com.svg";
 
 import SectionContainer from "../SectionContainer.astro";
-import { skills } from "@cv";
+const { skills } = Astro.props;
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,

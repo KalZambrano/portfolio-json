@@ -2,10 +2,11 @@
 import "@/styles/global.css";
 import "@fontsource-variable/onest";
 
-const { title } = Astro.props;
+const { title, basics } = Astro.props;
 
 import ThemeToogle from "@/components/ThemeToogle.astro";
-import { basics } from "@cv";
+import LanguageSelector from "@/components/LanguageSelector.astro";
+
 const { banner, summary, url } = basics;
 ---
 
@@ -39,8 +40,9 @@ const { banner, summary, url } = basics;
   <body>
     <div class="min-h-screen w-full bg-white relative">
       <div class="absolute inset-0 z-0 gradient-orange dark:crimsom-orange"/>
-      <span class="fixed top-4 right-4">
+      <span class="fixed top-4 right-4 flex flex-col gap-4">
         <ThemeToogle />
+        <LanguageSelector />
       </span>
       <main class="max-w-4xl mx-auto px-6 py-12">
         <slot />

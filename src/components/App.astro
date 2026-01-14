@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import About from "@/components/sections/About.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Skills from "@/components/sections/Skills.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Education from "@/components/sections/Education.astro";
+
+const { cv } = Astro.props;
+const { basics, work, education, projects, skills } = cv;
+const { name, label } = basics;
+---
+
+<Layout title={`${name} Portfolio - ${label}`} basics={basics}>
+  <Hero basics={basics} />
+  <About basics={basics} />
+  <Experience work={work} />
+  <Education education={education} />
+  <Projects projects={projects} />
+  <Skills skills={skills} />
+</Layout>

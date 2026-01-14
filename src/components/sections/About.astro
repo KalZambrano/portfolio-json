@@ -1,15 +1,21 @@
 ---
 import SectionContainer from "../SectionContainer.astro";
-import { basics } from "@cv";
 
+const { basics } = Astro.props;
 const { summary } = basics;
 ---
 
-<SectionContainer title="Sobre mí" animate="animate-fade-in-up animate-delay-200">
+<SectionContainer
+  title="Sobre mí"
+  animate="animate-fade-in-up animate-delay-200"
+>
   <div class="space-y-4">
     <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">
       {summary}
     </p>
-    <div class="h-px bg-linear-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-700"></div>
+    <div
+      class="h-px bg-linear-to-r from-transparent via-zinc-200 to-transparent dark:via-zinc-700"
+    >
+    </div>
   </div>
 </SectionContainer>

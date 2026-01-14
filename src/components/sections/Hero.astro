@@ -1,5 +1,4 @@
 ---
-import { basics } from "@cv";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Mail from "@/assets/mail.svg";
 import Phone from "@/assets/phone.svg";
@@ -8,6 +7,8 @@ import LinkedIn from "@/assets/social/linkedin.svg";
 import GitHub from "@/assets/social/github.svg";
 import WorldMap from "@/assets/worldmap.svg";
 import type { SocialIcon } from "@/types";
+
+const { basics } = Astro.props;
 
 const { name, label, image, location, profiles, phone, email } = basics;
 const { city, region } = location;
