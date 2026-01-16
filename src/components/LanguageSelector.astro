@@ -1,3 +1,19 @@
+---
+import { LANGUAGES } from "@/config/languages";
+
+const languages = Object.entries(LANGUAGES);
+
+// Detect idioma actual por URL
+const pathname = Astro.url.pathname;
+
+const currentLang =
+  languages.find(([_, lang]) => lang.path !== "/" && pathname.startsWith(lang.path))?.[0]
+  ?? languages.find(([_, lang]) => lang.default)?.[0]
+  ?? "es";
+
+const current = LANGUAGES[currentLang];
+---
+
 <div class="flag-dropdown">
   <button
     class="flag-btn"
@@ -8,8 +24,8 @@
   >
     <img
       id="currentFlag"
-      src="https://kapowaz.github.io/circle-flags/flags/es.svg"
-      alt="ES"
+      src={`https://kapowaz.github.io/circle-flags/flags/${current.flag}.svg`}
+      alt={current.label}
       width="48"
       height="48"
       fetchpriority="high"
@@ -22,77 +38,26 @@
     role="listbox"
     aria-label="Language selector"
   >
+    {languages
+      .filter(([key]) => key !== currentLang)
+      .map(([key, lang]) => (
+        <li role="option">
+          <a href={lang.path}>
+            <img
+              src={`https://kapowaz.github.io/circle-flags/flags/${lang.flag}.svg`}
+              alt={lang.label}
+              width="40"
+              height="40"
+            />
+          </a>
+        </li>
+      ))}
   </ul>
 </div>
 
 <script>
   const dropdown = document.querySelector(".flag-dropdown");
   const btn = document.getElementById("flagBtn");
-  const list = document.getElementById("flagList");
-  const currentFlagImg = document.getElementById("currentFlag");
-
-  const flags = {
-    es: {
-      url: "https://kapowaz.github.io/circle-flags/flags/es.svg",
-      path: "/",
-    },
-    en: {
-      url: "https://kapowaz.github.io/circle-flags/flags/us.svg",
-      path: "/en",
-    },
-    fr: {
-      url: "https://kapowaz.github.io/circle-flags/flags/fr.svg",
-      path: "/fr",
-    },
-    pt: {
-      url: "https://kapowaz.github.io/circle-flags/flags/pt.svg",
-      path: "/pt",
-    },
-  };
-
-  // Detect language from URL
-  const pathname = window.location.pathname;
-  const currentLang = pathname.startsWith("/en")
-    ? "en"
-    : pathname.startsWith("/fr")
-      ? "fr"
-      : pathname.startsWith("/pt")
-        ? "pt"
-        : "es";
-
-  // Update current flag (HTML ya existe → OK para LCP)
-  currentFlagImg.src = flags[currentLang].url;
-  currentFlagImg.alt = currentLang.toUpperCase();
-  currentFlagImg.fetchPriority = "high";
-
-  // Render dropdown list
-  function renderList() {
-    list.innerHTML = "";
-
-    Object.entries(flags).forEach(([lang, data]) => {
-      if (lang === currentLang) return;
-
-      const li = document.createElement("li");
-      li.dataset.lang = lang;
-      li.role = "option";
-
-      const a = document.createElement("a");
-      a.href = data.path;
-
-      const img = document.createElement("img");
-      img.src = data.url;
-      img.alt = lang.toUpperCase();
-      img.fetchPriority = "high";
-      img.width = 40;
-      img.height = 40;
-
-      a.appendChild(img);
-      li.appendChild(a);
-      list.appendChild(li);
-    });
-  }
-
-  renderList();
 
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -105,6 +70,7 @@
     btn.setAttribute("aria-expanded", "false");
   });
 </script>
+
 
 <style>
   .flag-dropdown {
@@ -133,7 +99,7 @@
   .flag-list {
     position: absolute;
     top: 56px;
-    left: 0;
+    left: -5px;
     display: flex;
     flex-direction: column;
     gap: 8px;
