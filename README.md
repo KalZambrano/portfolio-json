@@ -1,4 +1,6 @@
-# Portfolio JSON - Résumé Web
+
+<div align="center">
+  <h2>Portfolio JSON - Résumé Web</h2>
 
 Un portafolio responsive maquetado para web con soporte para múltiples idiomas (ES, EN, FR, PT), dark mode y light mode. 
 
@@ -7,8 +9,9 @@ Esquema del JSON de CV de <a href="https://jsonresume.org/schema/">jsonresume.or
 </p>
 
 <p>
-Basado en el diseño de <a href="https://github.com/midudev/minimalist-portfolio-json">Bartosz Jarocki</a>
+Basado en el diseño de <a href="https://github.com/midudev/minimalist-portfolio-json">Midudev</a>
 </p>
+</div>
 
 <img src="portada.png"></img> 
 
@@ -23,9 +26,10 @@ Este proyecto es un template de CV/Résumé completamente personalizable que se 
 
 ## 🛠️ Stack
 
-- **Astro**: Framework web rápido y moderno.
-- **TypeScript**: JavaScript con sintaxis de tipado.
-- **Tailwind CSS**: Utilidades CSS para un diseño flexible.
+- [**Astro**](https://astro.build/): Framework web rápido y moderno.
+- [**Typescript**](https://www.typescriptlang.org/): JavaScript con sintaxis de tipado.
+- [**Tailwind CSS**](https://tailwindcss.com/): Utilidades CSS para un diseño flexible.
+- [**Tailwind Animations**](https://tailwind-animations.com/): Animaciones rapidas y espectaculares.
 
 ## 🚀 Empezar
 
@@ -57,6 +61,7 @@ Si deseas eliminar algunos idiomas y que no se muestren en la interfaz de selecc
 Una vez editados los archivos, inicia el servidor de desarrollo:
 
 ```sh
+# Revisa el resultado
 npm run dev
 ```
 
