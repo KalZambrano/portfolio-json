@@ -1,0 +1,51 @@
+---
+import App from "@/components/App.astro";
+import { LANGUAGES } from "@/config/languages";
+
+export async function getStaticPaths() {
+  // Import all JSON files at build time
+  const cvs = await Promise.all(
+    Object.entries(LANGUAGES).map(async ([key, lang]) => {
+      // Use a switch or if-else to handle each language's import
+      let cvData;
+      try {
+        switch (key) {
+          case 'es':
+            cvData = (await import('../../../cv_spanish.json')).default;
+            break;
+          case 'en':
+            cvData = (await import('../../../cv_english.json')).default;
+            break;
+          case 'fr':
+            cvData = (await import('../../../cv_french.json')).default;
+            break;
+          case 'pt':
+            cvData = (await import('../../../cv_portuguese.json')).default;
+            break;
+          default:
+            cvData = (await import('../../../cv_spanish.json')).default;
+        }
+      } catch (error) {
+        console.error(`Error loading CV for language ${key}:`, error);
+        // Fallback to Spanish if there's an error
+        cvData = (await import('../../../cv_spanish.json')).default;
+      }
+
+      return {
+        params: { lang: key },
+        props: { 
+          lang: key,
+          cv: cvData
+        },
+      };
+    })
+  );
+
+  // Filter out any failed imports
+  return cvs.filter(Boolean);
+}
+
+const { cv } = Astro.props;
+---
+
+<App cv={cv} />
