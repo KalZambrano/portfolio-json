@@ -1,85 +1,76 @@
-
 <div align="center">
-  <h2>Portfolio JSON - Résumé Web</h2>
-
-Un portafolio responsive maquetado para web con soporte para múltiples idiomas (ES, EN, FR, PT), dark mode y light mode. 
-
+  <h2>Portfolio JSON - Web Resume</h2>
+A responsive web portfolio with support for multiple languages (ES, EN, FR, PT), dark mode and light mode.
 <p>
-Esquema del JSON de CV de <a href="https://jsonresume.org/schema/">jsonresume.org</a>
+CV JSON Schema from <a href="https://jsonresume.org/schema/">jsonresume.org</a>
 </p>
-
 <p>
-Basado en el diseño de <a href="https://github.com/midudev/minimalist-portfolio-json">Midudev</a>
+Based on the design by <a href="https://github.com/midudev/minimalist-portfolio-json">Midudev</a>
 </p>
 </div>
+<img src="portada.png"></img>
 
-<img src="portada.png"></img> 
+## Description
 
-## Descripción
+This project is a fully customizable CV/Resume template powered by JSON files. It allows you to showcase your professional information in an elegant and modern way, featuring:
 
-Este proyecto es un template de CV/Résumé completamente personalizable que se alimenta de archivos JSON. Permite mostrar tu información profesional de una manera elegante y moderna, con:
-
-- **Soporte multiidioma**: Español (predeterminado), Inglés, Francés y Portugués
-- **Tema oscuro/claro**: Cambio automático según preferencias del sistema o manual
-- **Totalmente responsive**: Adaptado para cualquier dispositivo
-- **Fácil de personalizar**: Solo edita los archivos JSON según tu idioma
+- **Multi-language support**: Spanish (default), English, French, and Portuguese
+- **Dark/Light theme**: Automatic switching based on system preferences or manual toggle
+- **Fully responsive**: Adapted for any device
+- **Easy to customize**: Just edit the JSON files according to your language
 
 ## 🛠️ Stack
 
-- [**Astro**](https://astro.build/): Framework web rápido y moderno.
-- [**Typescript**](https://www.typescriptlang.org/): JavaScript con sintaxis de tipado.
-- [**Tailwind CSS**](https://tailwindcss.com/): Utilidades CSS para un diseño flexible.
-- [**Tailwind Animations**](https://tailwind-animations.com/): Animaciones rapidas y espectaculares.
+- [**Astro**](https://astro.build/): Fast and modern web framework.
+- [**Typescript**](https://www.typescriptlang.org/): JavaScript with typed syntax.
+- [**Tailwind CSS**](https://tailwindcss.com/): CSS utilities for flexible design.
+- [**Tailwind Animations**](https://tailwind-animations.com/): Fast and spectacular animations.
 
-## 🚀 Empezar
+## 🚀 Getting Started
 
-### 1. Usa este [repo](https://github.com/midudev/minimalist-portfolio-json) como _template_ de un proyecto de Astro
-
-
+### 1. Use this [repo](https://github.com/midudev/minimalist-portfolio-json) as a _template_ for an Astro project
 ```sh
-# Inicializa el proyecto
+# Initialize the project
 npm create astro@latest -- --template KalZambrano/portfolio-json
 ```
 
-### 2. Editar contenido
+### 2. Edit content
 
-Edita los archivos JSON según el idioma que desees actualizar:
+The default language is **Spanish** (`cv_es.json`). You can keep or remove the other available languages (EN, FR, and PT) based on your needs.
 
-- `cv_spanish.json` - Para contenido en español
-- `cv_english.json` - Para contenido en inglés
-- `cv_french.json` - Para contenido en francés
-- `cv_portuguese.json` - Para contenido en portugués
+To manage languages, edit the `/config/languages.ts` file to add, remove, or modify the available language options.
 
-Cada archivo contiene secciones como: información personal, educación, experiencia, proyectos, habilidades, etc.
+Edit the JSON files according to the language you want to update:
 
-### 3. Gestionar idiomas (opcional)
+- `cv_es.json` - For Spanish content
+- `cv_en.json` - For English content
+- `cv_fr.json` - For French content
+- `cv_pt.json` - For Portuguese content
 
-Si deseas eliminar algunos idiomas y que no se muestren en la interfaz de selección, edita el componente `src/components/LanguageSelector.astro` para remover las opciones que no necesites.
+Each file contains sections such as: personal information, education, experience, projects, skills, etc.
 
-### 4. Ejecutar en desarrollo
+### 3. Run in development
 
-Una vez editados los archivos, inicia el servidor de desarrollo:
-
+Once you've edited the files, start the development server:
 ```sh
-# Revisa el resultado
+# Check the result
 npm run dev
 ```
 
-El proyecto estará disponible en `http://localhost:4321`
+The project will be available at `http://localhost:4321`
 
-## 📦 Comandos disponibles
+## 📦 Available Commands
 
-Todos los comandos se ejecutan desde la raíz del proyecto:
+All commands are run from the root of the project:
 
-| Comando              | Acción                                      |
-| :------------------- | :------------------------------------------ |
-| `npm install`        | Instala las dependencias                   |
-| `npm run dev`        | Inicia servidor local en `localhost:4321` |
-| `npm run build`      | Compila el proyecto a `./dist/`            |
-| `npm run preview`    | Previsualiza el build local                |
+| Command              | Action                                        |
+| :------------------- | :-------------------------------------------- |
+| `npm install`        | Installs dependencies                         |
+| `npm run dev`        | Starts local server at `localhost:4321`       |
+| `npm run build`      | Build your production site to `./dist/`       |
+| `npm run preview`    | Preview your build locally                    |
 
-## 📁 Estructura del proyecto
-
+## 📁 Project Structure
 ```text
 /
 ├── public/
@@ -91,28 +82,28 @@ Todos los comandos se ejecutan desde la raíz del proyecto:
 │   │   ├── App.astro
 │   │   ├── LanguageSelector.astro
 │   │   └── sections/
+│   ├── config/
+│   │   └── languages.ts
 │   ├── layouts/
 │   │   └── Layout.astro
 │   ├── pages/
-│   │   ├── index.astro
-│   │   ├── en/
-│   │   ├── fr/
-│   │   └── pt/
+│   │   ├── [lang]/
+│   │   └── index.astro
 │   ├── cv.d.ts
 │   └── types.d.ts
-├── cv_spanish.json
-├── cv_english.json
-├── cv_french.json
-├── cv_portuguese.json
+├── cv_es.json
+├── cv_en.json
+├── cv_fr.json
+├── cv_pt.json
 └── package.json
 ```
 
-## 🎨 Personalización
+## 🎨 Customization
 
-- **Colores y estilos**: Modifica `src/styles/global.css` y los archivos `.astro`
-- **Idiomas**: Usa `LanguageSelector.astro` para agregar o quitar opciones de idioma
-- **Contenido**: Actualiza los archivos JSON (`cv_*.json`) con tu información
+- **Colors and styles**: Modify `src/styles/global.css` and `.astro` files
+- **Languages**: Use `/config/languages.ts` to add or remove language options
+- **Content**: Update the JSON files (`cv_*.json`) with your information
 
-## 📄 Licencia
+## 📄 License
 
-Libre para usar y modificar.
+Free to use and modify.
