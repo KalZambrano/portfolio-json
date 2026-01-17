@@ -4,24 +4,24 @@ export const LANGUAGES = {
     flag: "es",
     path: "/",
     default: true,
-    json: "cv_spanish.json",
+    json: "cv_es.json",
   },
   en: {
     label: "EN",
     flag: "us",
     path: "/en",
-    json: "cv_english.json",
+    json: "cv_en.json",
   },
   fr: {
     label: "FR",
     flag: "fr",
     path: "/fr",
-    json: "cv_french.json",
+    json: "cv_fr.json",
   },
   pt: {
     label: "PT",
     flag: "pt",
     path: "/pt",
-    json: "cv_portuguese.json",
+    json: "cv_pt.json",
   },
 } as const

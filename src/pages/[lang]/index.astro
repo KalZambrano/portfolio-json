@@ -3,46 +3,41 @@ import App from "@/components/App.astro";
 import { LANGUAGES } from "@/config/languages";
 
 export async function getStaticPaths() {
-  // Import all JSON files at build time
-  const cvs = await Promise.all(
-    Object.entries(LANGUAGES).map(async ([key, lang]) => {
-      // Use a switch or if-else to handle each language's import
-      let cvData;
-      try {
-        switch (key) {
-          case 'es':
-            cvData = (await import('../../../cv_spanish.json')).default;
-            break;
-          case 'en':
-            cvData = (await import('../../../cv_english.json')).default;
-            break;
-          case 'fr':
-            cvData = (await import('../../../cv_french.json')).default;
-            break;
-          case 'pt':
-            cvData = (await import('../../../cv_portuguese.json')).default;
-            break;
-          default:
-            cvData = (await import('../../../cv_spanish.json')).default;
-        }
-      } catch (error) {
-        console.error(`Error loading CV for language ${key}:`, error);
-        // Fallback to Spanish if there's an error
-        cvData = (await import('../../../cv_spanish.json')).default;
-      }
-
-      return {
+  const paths = [];
+  
+  for (const [key, lang] of Object.entries(LANGUAGES)) {
+    try {
+      // Dynamic import based on language key
+      const cvData = await import(`../../../cv_${key}.json`).then(m => m.default);
+      
+      paths.push({
         params: { lang: key },
         props: { 
           lang: key,
           cv: cvData
         },
-      };
-    })
-  );
+      });
+    } catch (error) {
+      console.warn(`Skipping language ${key}: CV file not found or invalid`);
+      // Skip this language if the file doesn't exist
+      continue;
+    }
+  }
 
-  // Filter out any failed imports
-  return cvs.filter(Boolean);
+  // Ensure we have at least one language (fallback to Spanish if needed)
+  if (paths.length === 0) {
+    console.error('No valid language files found. Using Spanish as fallback.');
+    const cvData = await import('../../../cv_es.json').then(m => m.default);
+    paths.push({
+      params: { lang: 'es' },
+      props: {
+        lang: 'es',
+        cv: cvData
+      }
+    });
+  }
+
+  return paths;
 }
 
 const { cv } = Astro.props;

@@ -6,16 +6,16 @@
     "baseUrl": ".",
     "paths": {
       "@cv-es": [
-        "./cv_spanish.json"
+        "./cv_es.json"
       ],
       "@cv-en": [
-        "./cv_english.json"
+        "./cv_en.json"
       ],
       "@cv-fr": [
-        "./cv_french.json"
+        "./cv_fr.json"
       ],
       "@cv-pt": [
-        "./cv_portuguese.json"
+        "./cv_pt.json"
       ],
       "@/*": ["src/*"]
     }
